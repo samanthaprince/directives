@@ -37,20 +37,20 @@ app.directive('addLine', function(){
   };
 });
 
-// app.directive('popUp', function () {
-//   return {
-//     restrict: 'E',
-//     scope: {
-//       fn : '&fn'
-//     },
-//     template: '<div><input type="text" ng-model="value"/> <button class="button" ng-click="fnclicked({message:value})">Click Here</button> </div>',
-//     controller: function($scope) {
-//       $scope.fnclicked = function(value) {
-//         alert(value);
-//       };
-//     }
-//   };
-// });
+app.directive('popUp', function () {
+  return {
+    restrict: 'E',
+    scope: {
+      fn : '&fn'
+    },
+    template: '<div><input type="text" ng-model="value"/> <button class="button" ng-click="fnclicked({message:value})">Click Here</button> </div>',
+    controller: function($scope) {
+      $scope.fnclicked = function(value) {
+        alert(value);
+      };
+    }
+  };
+});
 
 app.directive('multiply', function(){
   return {
