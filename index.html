@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+  <head>
+    <meta charset="UTF-8">
+    <title>My Custom Directives</title>
+  </head>
+  <body>
+    <div add-line>
+    <h3>List of the animals in my house: </h3>
+    <custom></custom>
+      <dog name="'Winston'" age=6 hobby="'barking at the neighbors or sleeping'"></dog>
+    </div>
+    <div add-line>
+      <h3>List of humans in my house: </h3>
+      <custom></custom>
+        <human name="'Andrew'" occupation="'aeronautical engineer'"></human>
+        <human name="'Samantha'" occupation="'full stack developer'"></human>
+    </div>
+    <div>
+      <h3>Multiples of 10</h3>
+      <custom></custom>
+      <multiply number1=5></multiply>
+      <multiply number1=10></multiply>
+      <multiply number1=25></multiply>
+    </div>
+    <div>
+      <h3>The Current time is: </h3>
+      <clock></clock>
+    </div>
+    <!-- <div>
+      <pop-up fn='clicked(message);'></pop-up>
+    </div> -->
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./app.js"></script>
+     <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/137056/angular.js'></script>
+  </body>
+</html>
