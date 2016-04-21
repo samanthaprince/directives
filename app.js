@@ -25,6 +25,17 @@ app.directive('human', function(){
   };
 });
 
+app.directive('ta', function (){
+  return {
+    restrict: 'E',
+    scope: {
+      ta: '='
+    },
+    replace: true,
+    template: '<div> My TA is: {{ta}} </div>'
+  };
+});
+
 app.directive('addLine', function(){
   return {
     scope: {},
@@ -37,20 +48,20 @@ app.directive('addLine', function(){
   };
 });
 
-app.directive('popUp', function () {
-  return {
-    restrict: 'E',
-    scope: {
-      fn : '&fn'
-    },
-    template: '<div><input type="text" ng-model="value"/> <button class="button" ng-click="fnclicked({message:value})">Click Here</button> </div>',
-    controller: function($scope) {
-      $scope.fnclicked = function(value) {
-        alert(value);
-      };
-    }
-  };
-});
+// app.directive('popUp', function () {
+//   return {
+//     restrict: 'E',
+//     scope: {
+//       fn : '&fn'
+//     },
+//     template: '<div><input type="text" ng-model="value"/> <button class="button" ng-click="fnclicked({message:value})">Click Here</button> </div>',
+//     controller: function($scope) {
+//       $scope.fnclicked = function(value) {
+//         alert(value);
+//       };
+//     }
+//   };
+// });
 
 app.directive('multiply', function(){
   return {
